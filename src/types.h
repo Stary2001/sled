@@ -14,7 +14,8 @@ typedef uint64_t oscore_time;
 
 // Macros
 #define ARRAY_SIZE(stuff) (sizeof(stuff) / sizeof(stuff[0]))
-#define eprintf(...) fprintf(stderr, __VA_ARGS__)
+//#define eprintf(...) fprintf(stderr, __VA_ARGS__)
+#define eprintf(...) printf(__VA_ARGS__)
 
 #define MIN(x, y) (((x) < (y)) ? (x) : (y))
 #define MAX(x, y) (((x) > (y)) ? (x) : (y))

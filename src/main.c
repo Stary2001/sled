@@ -153,7 +153,7 @@ static int pick_next(int current_modno, oscore_time in) {
 #endif
 }
 
-void main_force_random(int mnum, int argc, char ** argv) {
+/*void main_force_random(int mnum, int argc, char ** argv) {
 	asl_av_t bundled = {argc, argv};
 	while (!timers_quitting) {
 		oscore_mutex_lock(rmod_lock);
@@ -168,7 +168,7 @@ void main_force_random(int mnum, int argc, char ** argv) {
 	}
 	// Quits out without doing anything to prevent deadlock.
 	asl_clearav(&bundled);
-}
+}*/
 
 int usage(char* name) {
 	printf("Usage: %s [-of]\n", name);
