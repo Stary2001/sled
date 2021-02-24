@@ -1,0 +1,29 @@
+# Makefile for sled on Pico
+PROJECT := sled
+
+# This can't work on any setting except static
+STATIC := 1
+PLATFORM := pico
+
+DEFAULT_OUTMOD := pico_st7789
+DEFAULT_MODULEDIR := "./modules"
+
+GFXMODS_PICO := gfx_twinkle gfx_gol gfx_rainbow gfx_math_sinpi gfx_plasma
+GFXMODS_PICO += gfx_balls gfx_sinematrix gfx_error gfx_partirush
+GFXMODS_PICO += gfx_matrix gfx_cube gfx_golc
+GFXMODS_PICO += gfx_bttrblls
+GFXMODS_PICO += gfx_sort2D gfx_xorrid gfx_starfield gfx_reddot gfx_sparkburn
+GFXMODS_PICO += gfx_sort1D gfx_rgbmatrix
+GFXMODS_PICO += gfx_ghostery gfx_ursuppe gfx_afterglow
+GFXMODS_PICO += gfx_ursuppe2 
+GFXMODS_PICO += gfx_snek gfx_wator gfx_noisewarp
+
+GFXMODS_SLOW = gfx_invfourier gfx_colorwheel gfx_mandelbrot2 gfx_mandelbrot gfx_disturbedcandy gfx_candyflow gfx_affinematrix gfx_candyswarm gfx_sinefield
+
+GFXMODS_BROKEN = gfx_clock
+
+MODULES = $(GFXMODS_PICO) out_$(DEFAULT_OUTMOD)
+
+MATRIX_X := 60
+MATRIX_Y := 60
+SDL_SCALE_FACTOR := 4
